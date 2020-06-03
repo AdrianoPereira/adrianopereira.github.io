@@ -1,0 +1,12 @@
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  display: none;
+  @media only screen and (min-width: $cut) {
+    width: 80%;
+  }
+}
