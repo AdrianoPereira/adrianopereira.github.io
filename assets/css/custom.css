@@ -27,3 +27,60 @@ figure.profile-image img {
 img.icon-image {
   width: 150px;
 }
+
+/* Blog below */
+.card-post {
+  margin-bottom: 50px;
+}
+
+.card-post .card-post-image {
+  width: 200px;
+  float: left;
+}
+
+.card-post .card-post-details {
+  padding: 0;
+  height: 150px;
+  vertical-align: top;
+  width: calc(100% - 210px);
+  float: right;
+}
+
+.card-post-details h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+span.card-post-author {
+  display: block;
+  font-size: 14px;
+}
+
+span.card-post-date {
+  display: block;
+  font-size: 12px;
+}
+
+.card-post-description {
+  text-align: justify;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.card-post figcaption {
+  float: right;
+}
+
+
+.card-post-title a {
+  text-decoration: none;
+  color: #1a222c;
+}
+
+.card-post-title a:hover {
+  text-decoration: underline;
+}
+
+.card-post img {
+  width: 200px;
+}
