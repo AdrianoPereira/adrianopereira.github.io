@@ -3659,7 +3659,7 @@ sup, sub {
     font-size: 20px;
     display: block;
     line-height: 1;
-    color: red !important;
+    color: #FFF;
     margin-top: 10px; }
     @media only screen and (min-width: 550px) {
       .header .site-description {
@@ -3842,11 +3842,46 @@ sup, sub {
   justify-content: space-between;
   width: 90%;
   max-width: 960px;
-  margin: 0 auto;
-  display: none; }
+  margin: 0 auto; }
   @media only screen and (min-width: 550px) {
     #contact {
       width: 80%; } }
+
+#contact-form .item-form {
+  display: block;
+  margin: 15px 0; }
+  #contact-form .item-form:last-child {
+    text-align: center; }
+#contact-form label {
+  margin: 5px;
+  font-weight: bold;
+  color: #1a222c; }
+#contact-form input, #contact-form textarea {
+  box-sizing: border-box;
+  border: 2px solid #dcdcdc;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 auto;
+  display: block;
+  width: calc(100% - 10px);
+  outline: none; }
+#contact-form button {
+  margin: 0 auto;
+  padding: 10px;
+  width: 200px;
+  height: 50px;
+  background: #FFF;
+  border: 2px solid #1a222c;
+  border-radius: 5px;
+  color: #1a222c;
+  text-transform: uppercase;
+  transition: .5s all linear;
+  font-weight: bolder; }
+  #contact-form button:hover {
+    cursor: pointer;
+    background: #1a222c;
+    color: #FFF;
+    transition: .3s all linear; }
 
 .footer {
   background: #1a222c;
