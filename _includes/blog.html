@@ -7,6 +7,10 @@
         <img src="{{ "/assets/img/blog/thumb_hello_world.png" | prepend: site.baseurl }}" alt="">
       </div>
       <div class="card-post-details">
+        <!-- {{ site.baseurl }} {{ link _posts/2020-06-05-hello-world.md }} -->
+        <a href="{{ "/_posts/2020-06-05-hello-world.md" | prepend: site.baseurl }}">oi</a>
+        {% link _posts/2020-06-05-hello-world.md %}
+        <!-- [Link to a document]({{ site.baseurl }}{% link _posts/2020-06-05-hello-world.md %}) -->
         <h2 class="card-post-title">
           <a href="#">Hello World</a>
         </h2>
@@ -22,4 +26,23 @@
         </span>
       </div>
   </div>
+  {% for post in site.posts %}
+    {% if post.stickie != true %}
+    {% continue %}
+    {% endif %}
+    p
+    <li>
+
+      {% assign date_format = site.hydrogen-blog.date_format | default: "%b %-d, %Y" %}
+      <span class="post-meta">{{ post.date | date: date_format }}</span> <span style="font-size:15px;background:#F48FB1;color:#fff;padding:4px 15px;border-radius:6px;-webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);">置顶</span>
+
+      <h2>
+        <a class="post-link" href="{{ post.url | relative_url }}" title="{{ post.title }}">{{ post.title | escape }}</a>
+      </h2>
+
+      <span>{{ post.excerpt | markdownify | truncatewords: 30 }}</span>
+
+    </li>
+    {% endfor %}
 </div>

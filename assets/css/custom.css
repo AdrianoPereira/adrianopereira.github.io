@@ -84,3 +84,16 @@ span.card-post-date {
 .card-post img {
   width: 200px;
 }
+
+@media only screen and (max-width: 550px) {
+  .card-post .card-post-image, .card-post .card-post-details {
+    display: block;
+    clear: both;
+    width: 100%;
+    text-align: center;
+  }
+  .card-post img {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
